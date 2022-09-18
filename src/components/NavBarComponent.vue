@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="container header-container">
+    <div class="footer-container header-container">
       <a href="" class="header-logo">
         <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="95.2" height="28" />
       </a>

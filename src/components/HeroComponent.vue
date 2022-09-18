@@ -1,6 +1,6 @@
 <template>
   <section class="hero">
-    <div class="container">
+    <div class="footer-container">
       <h1 class="hero-title">I’m a designer specialising in <span>UI/UX</span> and <span>Interaction Design</span></h1>
       <button class="hero-arrow"></button>
     </div>
@@ -16,7 +16,7 @@
   position: relative;
 }
 
-.container {
+.footer-container {
 }
 
 .hero-title {

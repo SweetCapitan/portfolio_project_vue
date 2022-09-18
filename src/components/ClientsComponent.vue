@@ -1,6 +1,6 @@
 <template>
   <section class="clients">
-    <div class="container">
+    <div class="footer-container">
       <h2 class="clients-title"><span>Some of</span> the clients I have
         designed for</h2>
       <div class="clients-body">
@@ -19,7 +19,7 @@
   padding: 80px 0 130px;
 }
 
-.container {
+.footer-container {
 }
 
 .clients-title {
