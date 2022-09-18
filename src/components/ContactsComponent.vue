@@ -36,10 +36,10 @@
         </a>
       </div>
     </div>
+    <div class="copyright">
+      Made with ❣️ by <a href="https://t.me/@Dancho68">SweetCapitan</a>
+    </div>
   </footer>
-  <div class="copyright">
-    Made with ❣️ by <a href="https://t.me/@Dancho68">SweetCapitan</a>
-  </div>
 </template>
 
 <style scoped>
@@ -97,6 +97,7 @@
   font-size: 18px;
   text-align: center;
   color: rgba(227, 228, 230, 0.55);
+  padding-top: 84px;
 }
 
 .copyright a {
