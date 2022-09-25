@@ -1,11 +1,22 @@
 <script setup lang="ts">
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
+import {sectionStore, Selection} from "@/store/store";
 
 const menuList = ref('')
 
 function changeMenuList () {
   menuList.value === '' ? menuList.value = 'active' : menuList.value = ''
 }
+
+function handleButtonClick(event: any) {
+  // console.log(event.target) // Для дебагга
+  const blockId = event.target.getAttribute("href").substring(1)
+  document.getElementById(blockId)?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  });
+}
+
 </script>
 
 <template>
@@ -16,10 +27,10 @@ function changeMenuList () {
       </a>
       <nav class="header-menu">
         <ul :class="menuList" class="menu-list">
-          <li class="menu-item"><a href="" class="menu-link">HOME</a></li>
-          <li class="menu-item"><a href="" class="menu-link">WORK</a></li>
-          <li class="menu-item"><a href="" class="menu-link">ABOUT</a></li>
-          <li class="menu-item"><a href="" class="menu-link">CONTACT ME</a></li>
+          <li class="menu-item"><a href="#home" class="menu-link" @click.prevent="handleButtonClick">HOME</a></li>
+          <li class="menu-item"><a href="#works" class="menu-link" @click.prevent="handleButtonClick">WORK</a></li>
+          <li class="menu-item"><a href="#about" class="menu-link" @click.prevent="handleButtonClick">ABOUT</a></li>
+          <li class="menu-item"><a href="#contacts" class="menu-link" @click.prevent="handleButtonClick">CONTACT ME</a></li>
         </ul>
       </nav>
       <div @click="changeMenuList" :class="menuList" class="menu-icon" >
@@ -71,7 +82,7 @@ function changeMenuList () {
   background: linear-gradient(99.05deg, #BC3CD8 0.07%, #C54B8C 106.32%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  /*background-clip: text;*/
 }
 
 .menu-link:hover::before {

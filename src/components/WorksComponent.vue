@@ -1,5 +1,5 @@
 <template>
-  <section class="works">
+  <section class="works" id="works">
     <div class="works-container footer-container">
       <h2 class="works-title">Selected <span>Works</span></h2>
       <div class="work-body">
@@ -84,6 +84,7 @@
 @import "@/assets/main.css";
 .works {
   padding: 80px 0 120px;
+  scroll-margin-top: 20px;
 }
 
 .works-container {
@@ -199,4 +200,36 @@
 .card-button:hover::before {
   background: transparent url("@/assets/arrow-hover.svg") center center no-repeat;
 }
+
+@media (max-width: 576px) {
+  .works {
+    padding: 30px 0;
+  }
+  .works-title {
+    font-size: 30px;
+  }
+  .work-body {
+    margin-top: 40px;
+  }
+  .card:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 760px) {
+  .card{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 475px) {
+  .card-text {
+    font-size: 25px;
+    margin-top: 15px;
+  }
+}
+
+
 </style>

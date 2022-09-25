@@ -45,4 +45,22 @@
 
 .clients-item {
 }
+
+@media (max-width: 910px) {
+  .clients-body {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 575px) {
+  .clients-title {
+    font-size: 30px;
+  }
+  .clients {
+    padding: 30px 0;
+  }
+  .clients-body {
+    margin-top: 40px;
+  }
+}
 </style>

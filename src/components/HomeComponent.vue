@@ -1,8 +1,8 @@
 <template>
-  <section class="hero">
+  <section class="hero observe" id="home">
     <div class="footer-container">
       <h1 class="hero-title">I’m a designer specialising in <span>UI/UX</span> and <span>Interaction Design</span></h1>
-      <button class="hero-arrow"></button>
+      <a href="#works" class="hero-arrow"></a>
     </div>
   </section>
 </template>
@@ -14,6 +14,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  min-height: 400px;
 }
 
 .footer-container {
@@ -45,4 +46,17 @@
   transform: translateX(-50%);
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 25px;
+  }
+}
+
+
 </style>

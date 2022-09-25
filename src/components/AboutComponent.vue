@@ -1,5 +1,5 @@
 <template>
-  <section class="about">
+  <section class="about" id="about">
     <div class="footer-container about-container">
       <div class="about-text">
         <h2 class="about-title">A bit about me</h2>
@@ -19,6 +19,7 @@
 <style scoped>
 .about {
   padding: 75px 0;
+  scroll-margin-top: 25px;
 }
 
 .about-container {
@@ -37,6 +38,7 @@
   font-weight: 600;
   font-size: 32px;
   color: #E3E4E6;
+  margin-top: 15px;
 }
 
 .about-title {
@@ -52,9 +54,17 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .about-img {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .about-img:nth-child(1){
   grid-column: 1/2;
@@ -67,5 +77,30 @@
 .about-img:nth-child(3){
   grid-column: 2/3;
   grid-row: 3/5;
+}
+
+@media (max-width: 992px) {
+  .about-gallery {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .about-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 575px) {
+  .about {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 475px) {
+  .about-text {
+    font-size: 25px;
+    margin-top: 10px;
+  }
 }
 </style>

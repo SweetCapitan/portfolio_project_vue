@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="container footer-container">
       <h3 class="footer-title"><span>Get</span> in Touch.</h3>
       <span class="footer-subtitle">So that we can more about ...</span>
@@ -90,6 +90,7 @@
 .footer-social:hover svg {
   fill: #fff;
   transform: scale(1.5);
+  transition: all .4s;
 }
 
 .copyright {
@@ -105,5 +106,11 @@
   color: #E3E4E6;
 }
 
+
+@media (max-width: 375px) {
+  .footer-title {
+    font-size: 35px;
+  }
+}
 
 </style>
